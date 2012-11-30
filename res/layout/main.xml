@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Go" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Start typing the name of your destination street in the textfield and choose it as it is suggested in the list of suggestions. Then select the house number of your destination and press Go.\n\nA map showing your location, and your destination will appear, with a compass needle pointing in the straight-line direction of your destination." />
+
+    <AutoCompleteTextView
+        android:id="@+id/streetNameTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/numberSpinner"
+        android:layout_below="@+id/straatnaamTextView"
+        android:layout_marginTop="15dip"
+        android:text=""
+        android:textSize="20dip" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <Spinner
+        android:id="@+id/numberSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/streetNameTextField"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/streetNameTextField" />
+
+    <TextView
+        android:id="@+id/straatnaamTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Straatnaam"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/huisNummerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/straatnaamTextView"
+        android:layout_alignBottom="@+id/straatnaamTextView"
+        android:layout_alignParentRight="true"
+        android:text="Huisnummer"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
